@@ -931,19 +931,20 @@ let hits = [
 console.log('Job hits');
 
 // 15.1: Get all the job hits
-// console.log(hits);
+console.log(hits);
 
 // 15.2: Get the first job hit
-// console.log(hits[0]);
+console.log(hits[0]);
 
 // 15.3: Get jobTitle of first job
-// console.log(hits[0].jobTitle);
+console.log(hits[0].jobTitle);
 
 // 15.4: Get the benefits of the first job hit
-// console.log(hits[0].benefits);
+console.log(hits[0].benefits);
 
 // 15.5: Log out first job hit benefit values
 console.log('First job hit benefit');
-for(let benefit of hits) {
-    console.log(benefit['benefitValue']);
+for(let value in benefits.hits) {
+        console.log(value['benefitValue']);
 }
+
