@@ -1,25 +1,23 @@
-function average(array) {
+function average(...others) {
     let sum = 0;
-    for (let i of array) {
-        sum += i;
+    for(let item of others) {
+        sum += item;
     }
-    let tbc = sum / array.length;
+    let tbc = sum / others.length;
+    console.log(`Điểm trung bình cộng là: ${tbc}`);
+    if(tbc < 3) {
+        alert(`Học sinh Yếu`);
+    }
+    else if (tbc < 5) {
+        alert(`Học sinh Trung bình`);
+    } 
+    else if(tbc <= 6.5) {
+        alert(`Học sinh Khá`);
+    }
+    else {
+        alert(`Học sinh Giỏi`);
+    }
     return tbc;
 }
-// tạo array chứa điểm
-let diem = [1, 2, 3, 4, 5, 6, 10];
+average(8, 9, 10, 8.5, 9.25)
 
-// tạo biến tinhToan để chạy function average lấy dữ liệu trong array diem, lấy 2 chữ số sau dấu ','
-let tinhToan = average(diem).toFixed(2);
-
-console.log(`Điểm Trung Bình Cộng là: ${tinhToan}`);
-
-if (tinhToan < 5) {
-    alert(`Học sinh Trung bình`);
-} 
-else if(tinhToan <= 6.5) {
-    alert(`Học sinh Khá`);
-}
-else {
-    alert(`Học sinh Giỏi`);
-}
